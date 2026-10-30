@@ -1,0 +1,38 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    
+}
+
+header {
+    background-color: #264653;
+    color: white;
+    padding: 20px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    background-color: #f4f1de;
+    padding: 20px;
+}
+
+footer {
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
