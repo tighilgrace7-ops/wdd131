@@ -1,0 +1,260 @@
+/* General page styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+     font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #222222
+}
+
+/* Heading styles */
+h1, 
+h2,
+h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+h3.center-heading {
+    text-align: center;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Header */
+header {
+    max-width: 960px;
+    margin: 0 auto
+}
+
+
+header span {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    background-color: #205477;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Navigation menu */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333333;
+    padding: 12px;
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Navigation hover effect */
+nav a:hover {
+    color: #FFD700;
+    background-color: #205477;
+}
+
+/* Main Content */
+main {
+    max-width: 890px;
+    margin: 0 auto;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+    align-items: stretch;
+}
+
+/* Main heading */
+main h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 5px 0 10px;
+    font-size: 1.8rem;
+}
+
+/* Card styles */
+.card {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 390px;
+}
+
+/* Card heading */
+.card h2 {
+    background-color: #205477;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    padding: 8px;
+    margin: 0;
+}
+
+/* About introduction */
+.about-intro {
+    display: grid;
+    grid-template-columns: 1fr 110px;
+    gap: 15px;
+    padding: 15px;
+    align-items: start;
+}
+
+.about-intro p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.about-intro img {
+    width: 110px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Culture heading */
+.card h3 {
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0;
+}
+
+/* Culture Divider */
+.card hr {
+    border: 0;
+    border-top: 1px solid #cccccc;
+    width: calc(100% - 170px);
+    margin: 0 0 5px 27px;
+    
+}
+
+
+/* Culture Section */
+.culture-info {
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    gap: 15px;
+    padding: 10px 15px;
+    align-items: start;
+}
+
+.culture-info img {
+    width: 125px;
+    height: 110px;
+    object-fit: cover;
+}
+
+.culture-info p {
+    margin: 0 0 10px;
+}
+
+
+
+
+/* Web Development Resources */
+.card ul {
+    padding: 15px 35px;
+    margin-top: 75px;
+}
+
+.card ul li {
+    margin-bottom: 3px;
+}
+
+.card ul a {
+    color: #0000ee;
+}
+
+/* Footer */
+footer {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #205477;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 3px;
+}
+
+#lastModified {
+    color: #ffffff;
+    font-size: 0.8rem;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 650px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main h1 {
+        grid-column: 1;
+    }
+
+    .card {
+        min-height: auto;
+    }
+
+    .about-intro {
+        grid-template-columns: 1fr 100px;
+    }
+
+    .about-intro img {
+        width: 100px;
+        height: 130px;
+    }
+
+    .culture-info {
+        grid-template-columns: 110px 1fr;
+    }
+
+    .culture-info img {
+        width: 110px;
+        height: 100px;
+    }
+
+    .card h3 {
+        width: calc(100% - 125px);
+        margin-left: 110px;
+        
+    }
+
+    .card hr {
+        width: calc(100% - 135px);
+        margin-left: 15px;
+    }
+
+    
+
+    .card ul {
+        margin-top: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    footer {
+        margin: 0 10px;
+    }
+    
+}

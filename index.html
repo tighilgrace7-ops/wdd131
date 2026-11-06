@@ -3,9 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 - Dynamic Web Fundamentals</title>
+    <link rel="stylesheet" href="styles/base.css">
+
+
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Grace Tighil's home page featuring personal introduction, web development, fashion, Tiv culture, Nigeria heritage, and learning resources.">
+    <meta name="author" content="Grace Tighil">
+    
+    <script src="scripts/getdates.js" defer></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>WDD 131 - Grace Tighil</h1>
+
+    <header>
+        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com/in/grace-tighil-5a691326a">Linkedin</a>
+            <a href="https://byupw.instructure.com/">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures">scriptures</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Grace Tighil</h1>
+
+        <section class="card">
+            <h2>About Me</h2>
+
+            <div class="about-intro">
+                <div>
+                    <p>My name is Grace Tighil, and I am from Nigeria. I enjoy learning new things, exploring technology, and 
+                developing skills that help me grow personally and professionally.
+                    </p>
+
+                    <p>I am currently studying web development, where I am learning HTML, CSS, and JavaScript. 
+                I also have experience in graphic design and video editing, which have helped me develop my creativity and attention to detail.
+                    </p>
+
+                    <p>Outside my studies, I have a passion for fashion. I enjoy exploring diffrent styles and appreciating beautiful designs.</p>
+                </div>
+
+                 <img src="image/grace.jpg" alt="Grace Tighil">
+            </div>
+
+            
+            <h3 style="text-align: center;">Tiv Culture and Heritage</h3>
+            <hr>
+
+            <div class="culture-info">
+                <img src="image/tiv-attire.jpg"
+                alt="People wearing traditional Tiv black-and-white A'nger attire">
+
+                <div>
+                     <p>I am proud of my Tiv cultural heritage. <br>One of the
+                    things I admire about Tiv <br>culure is our traditional
+                    black-and-white <br>striped fabric called A'nger. <br> 
+                    This distinctive attire represents our <br>cultural 
+                    identity, heritage, and pride.
+                 </p>
+
+                 <p>
+                    Tiv traditional attire is an important <br>part of our
+                    culture and is won during <br>cultural celebrations 
+                    and special <br>occasions.
+                 </p>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+
+            <ul>
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+                        MDN HTML Documentation
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+                        MDN CSS Documentation
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                        MDN JavaScript Documentation
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.freecodecamp.org/">
+                        freeCodeCamp
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.w3schools.com/">
+                        W3Schools
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> 💐 Grace Tighil 💐 Nigeria NG
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
