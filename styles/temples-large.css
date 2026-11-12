@@ -1,0 +1,33 @@
+@media screen and (min-width: 768px) {
+
+    /* Hide hamburger button */
+    #menu-button {
+        display: none;
+    }
+
+    /* Horizontal navigation */
+    nav {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        flex-basis: auto;
+        margin-top: 0;
+    }
+
+    nav a {
+        width: auto;
+    }
+
+    /* Three-column picture layout */
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Center main content */
+    main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    
+}
