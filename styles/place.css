@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
 /* CSS Variables */
@@ -52,10 +52,11 @@ main {
 
 .hero img {
     height: auto;
+    max-width: 100%;
     object-fit: cover;
 }
 
-/* Mobile Layout */
+/* Information Blocks */
 .data,
 .weather {
     background-color: var(--background-color);
@@ -72,6 +73,7 @@ main {
     text-align: center;
 }
 
+/* Information Lists */
 .data ul,
 .weather ul {
     list-style: none;
@@ -79,6 +81,7 @@ main {
     text-align: center;
 }
 
+/* Information Lists Items */
 .data li,
 .weather li {
     display: grid;
@@ -90,28 +93,11 @@ main {
     line-height: 1.5;
 }
 
-/* Align labels neatly */
+/* Align Information Labels */
 .data li strong,
 .weather li strong {
     text-align: right;
     white-space: nowrap;
-}
-
-/* Align all values from the same starting point */
-.data li,
-.weather li {
-    text-align: left;
-}
-
-/* Keep information neatly arranged on desktop */
-@media screen and (min-width: 768px) {
-    .data li,
-    .weather li {
-        grid-template-columns: 90px minmax(0, 1fr);
-        font-size: 0.85rem;
-        column-gap: 5px;
-    }
-    
 }
 
 /* Mobile Weather Icon */
@@ -123,82 +109,15 @@ main {
     object-fit: contain;
 }
 
-/* Desktop Layout */
-@media screen and (min-width: 768px) {
-    .hero {
-        position: relative;
-    }
-
-    .hero picture img {
-        width: 100%;
-        height: 480px;
-        object-fit: cover;
-    }
-
-    .data,
-    .weather {
-        position: absolute;
-        width: 260px;
-        background-color: rgba(255, 255, 255, 0.88);
-        margin: 0;
-        padding: 1rem;
-    }
-
-    .data {
-        top: 2rem;
-        left: 1rem;
-    }
-
-    .weather {
-        bottom: 2rem;
-        right: 1rem;
-    }
-
-    .data h2,
-    .weather h2 {
-        background-color: var(--primary-color);
-        color: var(--secondary-color);
-        text-align: left;
-        width: 100%;
-        position: relative;
-        left: -1.5rem;
-        
-    }
-
-    .hero img.weather-icon-mobile {
-        display: none;
-    }
-
-    .weather h2::after {
-        content: "⛅";
-        margin-left: 1rem;
-        font-size: 1.9rem;
-        vertical-align: middle;
-    }
-    
+/* General Text Styles */
+strong {
+    color: var(--primary-color);
 }
 
-/* Desktop white strips */
-@media screen and (min-width: 768px) {
-
-    /* White strip below the green Nigeria header */
-    header::after {
-        content: "";
-        display: block;
-        height: 20px;
-        background-color: #FFFFFF;
-        margin: 1rem -1rem -1rem;
-    }
-
-    /* White strip after the lion picture */
-    .hero::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 20px;
-        background-color: #FFFFFF;
-    }
-
+/* Remove Last List Items Spacing */
+.data li:last-child,
+.weather li:last-child {
+    margin-bottom: 0;
 }
 
 /* Footer Styles */
@@ -217,24 +136,92 @@ footer p {
     line-height: 1.5;
 }
 
-/* General Text and Spacing */
-strong {
-    color: var(--primary-color);
-}
+/* Keep information neatly arranged on desktop */
+@media screen and (min-width: 768px) {
 
-.data li:last-child,
-.weather li:last-child {
-    margin-bottom: 0;
-}
+    .data li,
+    .weather li {
+        grid-template-columns: 90px minmax(0, 1fr);
+        font-size: 0.85rem;
+        column-gap: 5px;
+    }  
 
-/* Responsive Image Display */
-.hero img {
-    max-width: 100%;
-}
+    /* Hero Positioning */
+    .hero {
+        position: relative;
+    }
 
-/* Make weather icon very small and centred on mobile */
+     .hero picture img {
+        width: 100%;
+        height: 480px;
+        object-fit: cover;
+    }
 
-/* Mobile Layout */
+/* Data and Weather Cards */
+    .data,
+    .weather {
+        position: absolute;
+        width: 260px;
+        background-color: rgba(255, 255, 255, 0.88);
+        margin: 0;
+        padding: 1rem;
+    }
+    /* Data Card Position */
+    .data {
+        top: 2rem;
+        left: 1rem;
+    }
+
+     .weather {
+        bottom: 2rem;
+        right: 1rem;
+    }
+
+    /* Desktop Card Headings */
+    .data h2,
+    .weather h2 {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        text-align: left;
+        width: 100%;
+        position: relative;
+        left: -1.5rem;  
+    }
+
+    /* Hide Mobile Weather Icon */
+     .hero img.weather-icon-mobile {
+        display: none;
+    }
+
+    /* Weather Heading Icon */
+     .weather h2::after {
+        content: "⛅";
+        margin-left: 1rem;
+        font-size: 1.9rem;
+        vertical-align: middle;
+    }
+
+     /* White strip below the green Nigeria header */
+    header::after {
+        content: "";
+        display: block;
+        height: 20px;
+        background-color: #FFFFFF;
+        margin: 1rem -1rem -1rem;
+    }
+
+    /* White strip after the lion picture */
+    .hero::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 20px;
+        background-color: #FFFFFF;
+    }
+
+    }
+
+    /* Mobile Layout */
 @media screen and (max-width: 767px) {
 
     /* Centre the information blocks */
@@ -244,7 +231,7 @@ strong {
         margin: 0 auto;
     }
 
-    /* Keep labels and values vertically aligned */
+    /* Align Mobile Information */
     .data li,
     .weather li {
         display: grid;
@@ -256,25 +243,13 @@ strong {
         line-height: 1.5;
     }
 
-    .data li strong,
-    .weather li strong {
-        text-align: right;
-        white-space: nowrap;
-    }
-
-    /* Weather icon */
+    /* Mobile Weather icon */
     .weather img.weather-icon-mobile {
         display: block;
-        width: 100px;
-        height: 100px;
+        width: 95px;
+        height: 95px;
         margin: 0.5rem auto;
         object-fit: contain;
-    }
-
-    /* Large green country header */
-    header {
-        background-color: #006B3F;
-        color: #FFFFFF;
     }
 
     /* Thin white strip below the header */
@@ -286,12 +261,9 @@ strong {
         margin: 1rem -1rem -1rem;
     }
 
-    /* Thin green strip at the bottom of the lion picture */
+     /* Thin green strip at the bottom of the lion picture */
     .hero picture img {
         border-bottom: 6px solid #006B3F;
     }
 }
-    
 
-
-    
