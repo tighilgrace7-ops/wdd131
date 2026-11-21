@@ -1,0 +1,62 @@
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" width="160" height="140">
+  <defs>
+    <radialGradient id="sun" cx="35%" cy="30%">
+      <stop offset="0%" stop-color="#FFF9B0"/>
+      <stop offset="65%" stop-color="#FFC83D"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </radialGradient>
+    <linearGradient id="cloud" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#B9C9D8"/>
+    </linearGradient>
+    <linearGradient id="rain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8BE3FF"/>
+      <stop offset="100%" stop-color="#168BD2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#52677A" flood-opacity=".25"/>
+    </filter>
+  </defs>
+
+  <!-- Sun glow -->
+  <circle cx="48" cy="43" r="30" fill="#FFD54F" opacity=".35" filter="url(#glow)"/>
+
+  <!-- Sun rays -->
+  <g stroke="#F5A623" stroke-width="4" stroke-linecap="round">
+    <path d="M48 5V13 M48 73V81 M10 43H18 M78 43H86"/>
+    <path d="M21 16L27 22 M69 64L75 70 M21 70L27 64 M69 22L75 16"/>
+  </g>
+
+  <!-- Sun -->
+  <circle cx="48" cy="43" r="23" fill="url(#sun)"/>
+  <circle cx="40" cy="34" r="7" fill="#FFFFFF" opacity=".35"/>
+
+  <!-- Cloud -->
+  <g filter="url(#shadow)">
+    <path d="M35 86
+      C25 86 19 79 19 70
+      C19 60 27 53 37 53
+      C41 38 56 32 69 38
+      C78 42 82 50 83 57
+      C96 52 111 60 112 73
+      C124 74 132 82 132 93
+      C132 104 123 111 111 111
+      H38 C26 111 18 103 18 94
+      C18 90 24 86 35 86Z"
+      fill="url(#cloud)" stroke="#A9BDCE" stroke-width="1.5"/>
+    <path d="M37 58C44 43 62 39 74 49" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+  </g>
+
+  <!-- Rain drops -->
+  <g fill="url(#rain)" stroke="#168BD2" stroke-width="1">
+    <path d="M49 116C49 116 40 127 40 131A9 9 0 0 0 58 131C58 127 49 116 49 116Z"/>
+    <path d="M80 116C80 116 71 127 71 131A9 9 0 0 0 89 131C89 127 80 116 80 116Z"/>
+    <path d="M111 116C111 116 102 127 102 131A9 9 0 0 0 120 131C120 127 111 116 111 116Z"/>
+  </g>
+</svg>
+

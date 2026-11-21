@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Nigeria, its capital city, geography, population, culture, and weather.">
+    <meta name="author" content="Grace Tighil">
+    <title>Nigeria | Country Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source
+                srcset="images/nigeria-large.webp"
+                media="(min-width: 768px)">
+                <img
+                src="images/nigeria-small.webp"
+                alt="Lions in their natural habitat"
+                width="800"
+                height="597">
+            </picture>
+
+            <section class="data">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 923,768 km²</li>
+                    <li><strong>Population:</strong> Approximately 230 million</li>
+                    <li><strong>Capital:</strong> Abuja</li>
+                    <li><strong>Languages:</strong> English and local languages</li>
+                    <li><strong>Currency:</strong> Nigerian Naira (₦)</li>
+                    <li><strong>Calling Code:</strong> +234</li>
+                    <li><strong>Continent:</strong> Africa</li>
+                </ul>
+            </section>
+
+            <section class="weather">
+                <h2>Weather</h2>
+
+                <img
+                class="weather-icon-mobile"
+                src="images/weather.svg"
+                alt="Sun, cloud, and raindrops"
+                width="60"
+                height="60">
+
+                <ul>
+                    <li>
+                        <strong>Temperature:</strong> 
+                        <span><span id="temperature">29</span>°C</span>
+                    </li>
+                    <li>
+                        <strong>Conditions:</strong> 
+                        <span>Partly Cloudy</span> 
+                    </li>
+                    <li>
+                        <strong>Wind:</strong> 
+                        <span><span id="wind-speed">12</span> km/h</span>
+                    </li>
+                    <li>
+                        <strong>Wind Chill:</strong> 
+                        <span id="windchill">N/A</span>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 💐Grace Tighil💐Nigeria</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    
+</body>
+</html>
